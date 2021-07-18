@@ -6,7 +6,7 @@
 	url = https://github.com/ARMmbed/mbedtls
 [submodule "src/curl"]
 	path = src/curl
-	url = https://github.com/curl/curl
+	url = https://github.com/Benau/curl
 [submodule "src/sqlite"]
 	path = src/sqlite
 	url = https://github.com/azadkuh/sqlite-amalgamation
