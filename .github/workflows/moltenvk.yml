@@ -19,9 +19,9 @@ jobs:
 
       - name: Checkout RT MoltenVK
         run: |
-          git clone https://github.com/Benau/MoltenVK.git MoltenVK-RT
+          git clone https://github.com/dttdrv/MoltenVK.git MoltenVK-RT
           cd MoltenVK-RT
-          git checkout 9464235e8b84da61ba57e7b30647355c593c61d0
+          git checkout c7496b0482c1dcf349001b335207001d647b3308
 
       - name: Checkout SPIRV-Cross
         run: |
@@ -73,14 +73,14 @@ jobs:
           touch -r README.md Package/Release/MoltenVK/include/vk_video/*
           touch -r README.md Package/Release/MoltenVK/include/vulkan/*
 
-          tar -cJf ../moltenvk-rt.tar.xz \
+          tar -cJf ../moltenvk-rt-official.tar.xz \
             -C Package/Release/MoltenVK .
 
       - name: Upload MoltenVK
         uses: ncipollo/release-action@v1.11.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: moltenvk-rt.tar.xz
+          artifacts: moltenvk-rt-official.tar.xz
           tag: "moltenvk"
           omitBodyDuringUpdate: true
           omitNameDuringUpdate: true
